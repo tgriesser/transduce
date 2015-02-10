@@ -16,7 +16,7 @@ var isReduced = require('../base/isReduced'),
 //
 // If reducer, xf, is not defined, maintains last value and does not buffer results.
 module.exports =
-function asCallback(t, xf){
+function asCallback(t, xf, init){
   var done = false, stepper, result
 
   if(xf === void 0){
@@ -24,7 +24,7 @@ function asCallback(t, xf){
   }
 
   stepper = t(xf)
-  result = stepper.init()
+  result = arguments.length === 2 ? stepper.init() : init
 
   return function(item){
     if(done) return result
