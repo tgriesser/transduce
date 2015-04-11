@@ -6,8 +6,12 @@ const symIter = protocols.iterator
 
 // Transformer, iterable, completing
 import {transduceImpl, reduceImpl, intoImpl,
-        transformer, iterable, iterator, completing} from './_internal'
-export {transformer, iterable, iterator, completing}
+        transformer, iterable, iterator, completing, 
+        ArrayIterable, FunctionIterable, ObjectIterable,
+        ArrayTransformer, StringTransformer, ObjectTransformer} from './_internal'
+export {transformer, iterable, iterator, completing,
+        ArrayIterable, FunctionIterable, ObjectIterable,
+        ArrayTransformer, StringTransformer, ObjectTransformer}
 
 export {compose, identity, protocols, isReduced, reduced, unreduced, Transducer}
 
